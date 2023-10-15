@@ -1,0 +1,114 @@
+SERVICES variable is ignored if EAGER_SERVICE_LOADING=0.
+2023-10-15T18:08:00.873  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2023-10-15T18:08:00.873  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2023-10-15T18:08:00.888  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2023-10-15T18:08:00.888  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2023-10-15T18:08:00.995  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 2127.24ms
+2023-10-15T18:11:30.541  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2023-10-15T18:11:33.744  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2023-10-15T18:11:35.468  INFO --- [   asgi_gw_0] localstack.utils.bootstrap : Execution of "_load_service_plugin" took 1711.82ms
+2023-10-15T18:11:35.469  INFO --- [   asgi_gw_0] localstack.utils.bootstrap : Execution of "require" took 1712.73ms
+2023-10-15T18:11:35.516  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2023-10-15T18:11:35.531  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2023-10-15T18:11:35.621  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.CreateChangeSet => 200
+2023-10-15T18:11:35.631  WARN --- [   asgi_gw_1] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: ClientToken
+2023-10-15T18:11:35.632  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeChangeSet => 200
+2023-10-15T18:11:35.648  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.ExecuteChangeSet => 200
+2023-10-15T18:11:35.659  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T18:11:36.133  INFO --- [functhread40] l.services.motoserver      : starting moto server on http://0.0.0.0:40987
+2023-10-15T18:11:36.133  INFO --- [   asgi_gw_0] localstack.services.infra  : Starting mock S3 service on http port 4566 ...
+2023-10-15T18:11:36.499  WARN --- [functhread37] l.s.c.models.ecr           : Creating a Mock ECR Repository for CloudFormation. This is only intended to be used for allowing a successful CDK bootstrap and does not provision any underlying ECR repository.
+2023-10-15T18:11:37.636  WARN --- [functhread37] l.s.c.e.template_deployer  : Unexpected error processing resource type AWS::SSM::Parameter: Exception: Parameter validation failed:
+Invalid type for parameter Name, value: {'Fn::Sub': '/cdk-bootstrap/${Qualifier}/version'}, type: <class 'dict'>, valid types: <class 'str'> - {'Type': 'String', 'Name': {'Fn::Sub': '/cdk-bootstrap/${Qualifier}/version'}, 'Value': '18'} - status: None
+2023-10-15T18:11:37.672  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.691  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.706  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.723  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.741  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.762  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.785  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.797  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.819  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.841  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.857  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.878  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.903  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.916  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.930  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.944  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.958  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.973  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:37.988  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:38.003  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:38.019  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:38.035  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:38.048  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:40.116  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:11:40.698  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T18:11:40.722  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:14:03.647  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T18:14:03.663  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T18:14:03.675  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.696  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2023-10-15T18:14:03.711  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.717  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS ssm.GetParameter => 200
+2023-10-15T18:14:03.725  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T18:14:03.733  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.738  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketLocation => 200
+2023-10-15T18:14:03.744  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.749  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2023-10-15T18:14:03.755  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.759  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketEncryption => 404 (ServerSideEncryptionConfigurationNotFoundError)
+2023-10-15T18:14:03.770  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.780  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.PutObject => 200
+2023-10-15T18:14:03.790  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T18:14:03.799  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.800  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2023-10-15T18:14:03.923  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.925  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2023-10-15T18:14:03.934  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.945  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.950  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-15T18:14:03.960  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.CreateChangeSet => 200
+2023-10-15T18:14:03.974  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.975  WARN --- [   asgi_gw_0] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: RoleARN
+2023-10-15T18:14:03.975  WARN --- [   asgi_gw_0] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: ClientToken
+2023-10-15T18:14:03.976  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeChangeSet => 200
+2023-10-15T18:14:03.982  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:03.990  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.ExecuteChangeSet => 200
+2023-10-15T18:14:03.999  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:04.001  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T18:14:04.365  INFO --- [uncthread145] l.services.dynamodb.server : Initializing DynamoDB Local with the following configuration:
+2023-10-15T18:14:04.365  INFO --- [uncthread145] l.services.dynamodb.server : Port:	51869
+2023-10-15T18:14:04.365  INFO --- [uncthread145] l.services.dynamodb.server : InMemory:	false
+2023-10-15T18:14:04.365  INFO --- [uncthread145] l.services.dynamodb.server : DbPath:	/var/lib/localstack/tmp/state/dynamodb
+2023-10-15T18:14:04.365  INFO --- [uncthread145] l.services.dynamodb.server : SharedDb:	false
+2023-10-15T18:14:04.365  INFO --- [uncthread145] l.services.dynamodb.server : shouldDelayTransientStatuses:	false
+2023-10-15T18:14:04.365  INFO --- [uncthread145] l.services.dynamodb.server : CorsParams:	null
+2023-10-15T18:14:04.378  INFO --- [uncthread145] l.services.dynamodb.server : 
+2023-10-15T18:14:05.464  INFO --- [   asgi_gw_1] localstack.utils.bootstrap : Execution of "require" took 1423.87ms
+2023-10-15T18:14:06.294  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:06.297  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:14:06.309  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:06.313  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:14:06.329  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:06.332  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:14:06.343  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:06.347  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:14:08.408  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:08.412  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:14:09.034  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:09.039  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T18:14:09.059  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:14:09.063  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T18:19:50.833  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T18:19:50.885  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2023-10-15T18:28:56.466  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2023-10-15T18:28:56.535  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2023-10-15T18:29:04.807  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2023-10-15T18:29:06.133  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2023-10-15T18:29:06.224  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2023-10-15T18:29:24.580  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2023-10-15T18:29:24.623  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2023-10-15T18:29:26.171  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2023-10-15T18:29:27.780  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.Scan => 200
