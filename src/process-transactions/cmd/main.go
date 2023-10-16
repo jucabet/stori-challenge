@@ -22,7 +22,7 @@ func main() {
 }
 
 func runHandler() {
-	if os.Getenv("ENV") == string(enums.LOCAL) {
+	if os.Getenv("ENV") == string(enums.LOCAL) || os.Getenv("ENV") == string(enums.DOCKER) {
 		result, err := lambdahandler.HandleRequest(context.Background())
 		if err != nil {
 			panic(err)
