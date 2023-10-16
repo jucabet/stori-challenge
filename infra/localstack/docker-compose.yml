@@ -35,3 +35,22 @@ services:
       AWS_SECRET_ACCESS_KEY: "qL4lyH"
     depends_on:
       - localstack
+  send-reports:
+    build: ../../src/send-reports
+    container_name: send-reports
+    network_mode: "host"
+    environment:
+      ENV: docker
+      MAILER_FROM_HOST: 'smtp.gmail.com'
+      MAILER_FROM_PORT: 587
+      MAILER_FROM_EMAIL: 'jucabet15@gmail.com'
+      MAILER_FROM_USER: 'jucabet15@gmail.com'
+      MAILER_FROM_PASSWORD: 'laPass15*'
+      AWS_REGION: 'us-east-1'
+      AWS_DYNAMO_TABLE_NAME: 'stori-transactions-db'
+      URL_ENDPOINT_LOCALSTACK: 'http://localhost:4566'
+      AWS_SQS_NAME: 'reports-queue'
+      AWS_ACCESS_KEY_ID: "xyz123"
+      AWS_SECRET_ACCESS_KEY: "qL4lyH"
+    depends_on:
+      - localstack
