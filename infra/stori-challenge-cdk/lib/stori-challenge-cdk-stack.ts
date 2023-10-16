@@ -28,31 +28,14 @@ export class StoriChallengeCdkStack extends cdk.Stack {
       writeCapacity: 1,
       projectionType: ProjectionType.ALL,
     });
-
-    //==================================================
-    //================ Lambda Functions ================
-    //==================================================
-    // const processTransactionLambda = new lambda.Function(this, 'processTransaction', {
-    //   code: lambda.Code.fromAsset(path.join(__dirname, 'process-transaction-handler')),
-    //   handler: 'processTransaction',
-    //   runtime: lambda.Runtime.GO_1_X,
-    // })
-    
-    // const sendReportsLambda = new lambda.Function(this, 'sendReports', {
-    //   code: lambda.Code.fromAsset(path.join(__dirname, 'send-reports-handler')),
-    //   handler: 'processTransaction',
-    //   runtime: lambda.Runtime.GO_1_X,
-    // })
     
     //==================================================
     //=================== SQS Config ===================
     //==================================================
-    const queue = new sqs.Queue(this, 'sqs-queue');
-    // sendReportsLambda.addEventSource(
-    //   new SqsEventSource(queue, {
-    //     batchSize: 10,
-    //   }),
-    // );
+    const queue = new sqs.Queue(this, 'reports-queue', {
+      queueName: 'reports-queue',
+    });
+    
 
     //==================================================
     //==================== S3 Config ===================
@@ -61,14 +44,39 @@ export class StoriChallengeCdkStack extends cdk.Stack {
       bucketName: 'transactions-bucket',
     });
 
-    // TransactionsBucket.addEventNotification(
-    //   s3.EventType.OBJECT_CREATED_PUT,
-    //   new s3Notifications.LambdaDestination(processTransactionLambda), {
-    //     // The trigger will only fire on files with the .csv extension.
-    //     suffix: '.csv',
-    //     // The trigger will only fire on incoming_files/ folder
-    //     prefix: 'incoming_files/',
-    //   }
-    // );
+    // Only for prod environment
+    if (process.env.ENV != 'local') {
+      //==================================================
+      //================ Lambda Functions ================
+      //==================================================
+      const processTransactionLambda = new lambda.Function(this, 'processTransaction', {
+        code: lambda.Code.fromAsset(path.join(__dirname, 'process-transaction-handler')),
+        handler: 'processTransaction',
+        runtime: lambda.Runtime.GO_1_X,
+      })
+      
+      const sendReportsLambda = new lambda.Function(this, 'sendReports', {
+        code: lambda.Code.fromAsset(path.join(__dirname, 'send-reports-handler')),
+        handler: 'processTransaction',
+        runtime: lambda.Runtime.GO_1_X,
+      })
+
+      sendReportsLambda.addEventSource(
+        new SqsEventSource(queue, {
+          batchSize: 10,
+        }),
+      );
+
+      TransactionsBucket.addEventNotification(
+        s3.EventType.OBJECT_CREATED_PUT,
+        new s3Notifications.LambdaDestination(processTransactionLambda), {
+          // The trigger will only fire on files with the .csv extension.
+          suffix: '.csv',
+          // The trigger will only fire on incoming_files/ folder
+          prefix: 'incoming_files/',
+        }
+      );
+    }
+
   }
 }

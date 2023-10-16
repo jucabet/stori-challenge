@@ -40,7 +40,7 @@ func (adapter *S3Adapter) GetFileContentByName(folder enums.StorageFolders, name
 		context.Background(),
 		&s3.GetObjectInput{
 			Bucket: aws.String(adapter.bucket),
-			Key:    aws.String(string(folder) + "/" + name),
+			Key:    aws.String(string(folder) + name),
 		},
 	)
 	if err != nil {

@@ -37,6 +37,7 @@ var processFiles = func(pt *ProcessTransaction, files []string) error {
 		txFileInfo, err := pt.storageService.GetFileContentByName(enums.IncomingFiles, filename)
 		if err != nil {
 			utils.ErrorLog("processFiles", err)
+			return err
 		}
 
 		wg.Add(1)

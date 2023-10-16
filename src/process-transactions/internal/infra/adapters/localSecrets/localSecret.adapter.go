@@ -13,7 +13,7 @@ func NewLocalSecretAdapter() *LocalSecretAdapter {
 }
 
 func (adapter *LocalSecretAdapter) LoadSecrets() error {
-	err := godotenv.Load()
+	err := godotenv.Load("../.env")
 	if err != nil {
 		utils.ErrorLog("LoadSecret", err)
 		return err

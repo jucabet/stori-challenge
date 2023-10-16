@@ -27,8 +27,8 @@ func (adapter *S3Adapter) MoveFile(src, dest *dtos.MoveFileDto) error {
 func (adapter *S3Adapter) copyFile(src, dest *dtos.MoveFileDto) error {
 	_, err := adapter.client.CopyObject(context.Background(), &s3.CopyObjectInput{
 		Bucket:     aws.String(adapter.bucket),
-		CopySource: aws.String(adapter.bucket + "/" + string(src.Folder) + "/" + src.Filename),
-		Key:        aws.String(string(dest.Folder) + "/" + dest.Filename),
+		CopySource: aws.String(adapter.bucket + "/" + string(src.Folder) + src.Filename),
+		Key:        aws.String(string(dest.Folder) + dest.Filename),
 		ACL:        types.ObjectCannedACLBucketOwnerFullControl,
 	})
 	if err != nil {
@@ -41,7 +41,7 @@ func (adapter *S3Adapter) copyFile(src, dest *dtos.MoveFileDto) error {
 func (adapter *S3Adapter) deleteFile(folder enums.StorageFolders, filename string) error {
 	_, err := adapter.client.DeleteObject(context.Background(), &s3.DeleteObjectInput{
 		Bucket: aws.String(adapter.bucket),
-		Key:    aws.String(string(folder) + "/" + filename),
+		Key:    aws.String(string(folder) + filename),
 	})
 	if err != nil {
 		return err

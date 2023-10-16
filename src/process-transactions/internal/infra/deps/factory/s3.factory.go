@@ -14,7 +14,9 @@ func NewS3Adapter() (*s3Adapter.S3Adapter, error) {
 		return nil, err
 	}
 
-	client := s3.NewFromConfig(cfg)
+	client := s3.NewFromConfig(cfg, func(o *s3.Options) {
+		o.UsePathStyle = true
+	})
 
 	return s3Adapter.NewS3Adapter(client, os.Getenv("AWS_BUCKET_NAME")), nil
 }

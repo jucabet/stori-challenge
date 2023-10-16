@@ -112,3 +112,280 @@ Invalid type for parameter Name, value: {'Fn::Sub': '/cdk-bootstrap/${Qualifier}
 2023-10-15T18:29:24.623  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.ListTables => 200
 2023-10-15T18:29:26.171  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.ListTables => 200
 2023-10-15T18:29:27.780  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.Scan => 200
+2023-10-15T23:45:23.025  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2023-10-15T23:45:23.046  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:45:23.061  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:45:23.074  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:46:08.214  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2023-10-15T23:46:08.234  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:46:08.249  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:46:08.262  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:47:03.170  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2023-10-15T23:47:03.194  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:47:03.208  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:47:03.235  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:47:05.883  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T23:47:05.897  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T23:47:05.909  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:47:05.929  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2023-10-15T23:47:05.940  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T23:47:05.951  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:47:05.957  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS ssm.GetParameter => 200
+2023-10-15T23:47:05.965  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:47:05.967  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:47:05.973  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:47:05.974  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:47:06.081  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:47:06.082  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:47:06.090  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:47:06.091  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:48:18.943  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2023-10-15T23:48:18.966  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:48:18.980  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:48:18.989  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:48:21.680  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T23:48:21.723  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T23:48:21.737  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.748  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2023-10-15T23:48:21.761  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.765  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS ssm.GetParameter => 200
+2023-10-15T23:48:21.773  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T23:48:21.779  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.783  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketLocation => 200
+2023-10-15T23:48:21.789  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.795  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2023-10-15T23:48:21.802  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.807  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketEncryption => 404 (ServerSideEncryptionConfigurationNotFoundError)
+2023-10-15T23:48:21.821  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.828  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 200
+2023-10-15T23:48:21.836  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-15T23:48:21.846  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.849  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:48:21.859  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.860  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:48:21.991  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:21.995  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:48:22.003  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:22.005  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-15T23:48:22.015  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:22.019  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DeleteChangeSet => 200
+2023-10-15T23:48:22.025  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:22.029  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:22.034  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-15T23:48:22.045  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.CreateChangeSet => 200
+2023-10-15T23:48:22.052  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:22.054  WARN --- [   asgi_gw_0] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: RoleARN
+2023-10-15T23:48:22.054  WARN --- [   asgi_gw_0] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: ClientToken
+2023-10-15T23:48:22.054  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeChangeSet => 200
+2023-10-15T23:48:22.060  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:22.069  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.ExecuteChangeSet => 200
+2023-10-15T23:48:22.076  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:22.077  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:48:23.141  INFO --- [ncthread3087] l.s.c.e.template_deployer  : Updating resource CDKMetadata of type AWS::CDK::Metadata
+2023-10-15T23:48:24.083  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:24.090  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T23:48:24.101  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:24.106  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T23:48:24.113  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:24.116  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T23:48:24.140  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:24.143  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T23:48:24.149  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:24.152  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T23:48:24.158  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:24.161  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T23:48:26.176  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:26.179  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-15T23:48:27.110  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:27.112  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-15T23:48:27.122  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-15T23:48:27.125  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:04:56.284  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:04:56.322  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:14:35.064  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:14:35.083  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 200
+2023-10-16T00:15:01.257  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:15:01.276  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:15:41.561  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:15:41.582  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:15:41.588  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:15:41.602  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
+2023-10-16T00:15:41.628  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:15:41.690  INFO --- [   asgi_gw_0] localstack.services.infra  : Starting mock Lambda service on http port 4566 ...
+2023-10-16T00:15:42.318  INFO --- [   asgi_gw_0] localstack.utils.bootstrap : Execution of "require" took 633.14ms
+2023-10-16T00:15:43.213  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:15:43.227  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:15:43.228  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS sqs.GetQueueUrl => 400 (AWS.SimpleQueueService.NonExistentQueue)
+2023-10-16T00:15:43.237  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:15:43.244  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.CopyObject => 404 (NoSuchKey)
+2023-10-16T00:16:58.564  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:16:58.576  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:17:18.928  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:17:18.946  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
+2023-10-16T00:20:40.095  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:20:40.122  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:20:54.141  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:20:54.160  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
+2023-10-16T00:23:22.330  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:23:22.348  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:23:26.511  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:23:26.520  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
+2023-10-16T00:25:24.986  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:25:25.160  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:25:25.165  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:25:25.168  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS sqs.GetQueueUrl => 400 (AWS.SimpleQueueService.NonExistentQueue)
+2023-10-16T00:25:25.174  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:25:25.187  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.CopyObject => 404 (NoSuchKey)
+2023-10-16T00:26:25.303  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:26:25.315  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:26:40.287  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:26:40.298  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:28:18.007  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:28:18.018  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:28:21.624  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:28:21.640  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-16T00:29:49.049  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:29:49.076  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:29:49.081  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:29:49.089  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-16T00:30:39.179  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:30:39.211  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.PutObject => 200
+2023-10-16T00:30:48.794  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:30:48.807  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:30:48.813  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:30:48.819  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-16T00:31:15.831  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:15.947  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:31:15.955  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:15.955  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:15.956  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:15.959  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:16.147  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:31:16.229  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:31:16.316  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:31:16.402  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:31:16.409  WARN --- [   asgi_gw_7] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:16.412  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS sqs.GetQueueUrl => 400 (AWS.SimpleQueueService.NonExistentQueue)
+2023-10-16T00:31:16.430  WARN --- [   asgi_gw_6] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:16.439  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS s3.CopyObject => 200
+2023-10-16T00:31:16.447  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:16.664  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.DeleteObject => 204
+2023-10-16T00:31:57.947  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:31:57.957  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:32:21.708  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:32:21.721  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:32:40.613  WARN --- [   asgi_gw_4] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:32:40.630  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.PutObject => 200
+2023-10-16T00:32:43.142  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:32:43.159  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:33:06.933  WARN --- [   asgi_gw_7] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:06.945  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:33:06.952  WARN --- [   asgi_gw_4] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:06.956  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-16T00:33:12.191  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:12.299  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:33:12.322  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:12.323  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:12.323  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:12.324  WARN --- [   asgi_gw_7] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:12.570  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:33:12.675  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:33:12.758  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:33:12.834  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:33:24.132  WARN --- [   asgi_gw_4] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:33:24.134  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS sqs.GetQueueUrl => 400 (AWS.SimpleQueueService.NonExistentQueue)
+2023-10-16T00:34:23.742  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:34:23.749  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS sqs.ListQueues => 200
+2023-10-16T00:36:15.585  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2023-10-16T00:36:15.603  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-16T00:36:15.617  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-16T00:36:15.628  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-16T00:36:18.262  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-16T00:36:18.279  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-16T00:36:18.293  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.304  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2023-10-16T00:36:18.317  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.323  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS ssm.GetParameter => 200
+2023-10-16T00:36:18.336  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-16T00:36:18.343  WARN --- [   asgi_gw_5] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.349  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS s3.GetBucketLocation => 200
+2023-10-16T00:36:18.356  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.360  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2023-10-16T00:36:18.373  WARN --- [   asgi_gw_7] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.376  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS s3.GetBucketEncryption => 404 (ServerSideEncryptionConfigurationNotFoundError)
+2023-10-16T00:36:18.385  WARN --- [   asgi_gw_6] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.391  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS s3.PutObject => 200
+2023-10-16T00:36:18.401  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS sts.AssumeRole => 200
+2023-10-16T00:36:18.410  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.412  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-16T00:36:18.421  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.422  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-16T00:36:18.552  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.554  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-16T00:36:18.562  WARN --- [   asgi_gw_5] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.564  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS cloudformation.GetTemplate => 200
+2023-10-16T00:36:18.573  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.575  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DeleteChangeSet => 200
+2023-10-16T00:36:18.583  WARN --- [   asgi_gw_7] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.590  WARN --- [   asgi_gw_6] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.594  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-16T00:36:18.605  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS cloudformation.CreateChangeSet => 200
+2023-10-16T00:36:18.613  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.614  WARN --- [   asgi_gw_3] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: RoleARN
+2023-10-16T00:36:18.614  WARN --- [   asgi_gw_3] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: ClientToken
+2023-10-16T00:36:18.615  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS cloudformation.DescribeChangeSet => 200
+2023-10-16T00:36:18.622  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.630  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.ExecuteChangeSet => 200
+2023-10-16T00:36:18.657  WARN --- [   asgi_gw_4] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:18.660  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-16T00:36:19.320  INFO --- [ncthread3569] l.s.c.e.template_deployer  : Updating resource CDKMetadata of type AWS::CDK::Metadata
+2023-10-16T00:36:20.676  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:20.690  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:20.710  WARN --- [   asgi_gw_4] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:20.716  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:20.751  WARN --- [   asgi_gw_6] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:20.755  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:20.765  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:20.768  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:20.779  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:20.783  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:20.793  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:20.798  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:22.821  WARN --- [   asgi_gw_7] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:22.832  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:23.688  WARN --- [   asgi_gw_5] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:23.693  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2023-10-16T00:36:23.716  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:23.724  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2023-10-16T00:36:45.803  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:45.809  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS sqs.ListQueues => 200
+2023-10-16T00:36:57.228  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:57.253  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 200
+2023-10-16T00:36:57.262  WARN --- [   asgi_gw_6] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:57.272  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS s3.GetObject => 200
+2023-10-16T00:36:57.278  WARN --- [   asgi_gw_5] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:57.391  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:36:57.399  WARN --- [   asgi_gw_7] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:57.400  WARN --- [   asgi_gw_6] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:57.401  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:57.404  WARN --- [   asgi_gw_2] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:36:57.538  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:36:57.633  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:36:57.712  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:36:57.773  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2023-10-16T00:37:02.645  WARN --- [   asgi_gw_5] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:37:02.652  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS sqs.GetQueueUrl => 200
+2023-10-16T00:37:11.509  WARN --- [   asgi_gw_4] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:37:11.523  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS sqs.SendMessage => 200
+2023-10-16T00:37:11.540  WARN --- [   asgi_gw_3] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:37:11.549  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS s3.CopyObject => 200
+2023-10-16T00:37:11.559  WARN --- [   asgi_gw_6] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:37:11.577  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS s3.DeleteObject => 204
+2023-10-16T00:39:49.693  WARN --- [   asgi_gw_5] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:39:49.715  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS sqs.ReceiveMessage => 200
+2023-10-16T00:40:19.375  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.Scan => 200
+2023-10-16T00:40:19.510  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2023-10-16T00:40:48.942  WARN --- [   asgi_gw_0] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:40:48.951  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS sqs.ReceiveMessage => 200
+2023-10-16T00:41:12.304  WARN --- [   asgi_gw_1] localstack.aws.accounts    : Ignoring production AWS credentials provided to LocalStack. Falling back to default account ID.
+2023-10-16T00:41:12.318  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjects => 200
