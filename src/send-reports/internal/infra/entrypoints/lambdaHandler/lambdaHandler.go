@@ -23,13 +23,13 @@ func Handler(sqsAdapter *sqs.SQSAdapter) func(ctx context.Context) (string, erro
 
 		err = usecase.SendReportHandler(&dtos.SendReportDto{
 			ReportType:   enums.ReportType(message["reportType"]),
-			FileChargeID: message["fileChargeID"],
+			FileChargeID: message["fileChargeId"],
 		})
 		if err != nil {
 			return "", err
 		}
 
-		err = sqsAdapter.DeleteMessage(message["messageID"])
+		err = sqsAdapter.DeleteMessage(message["messageId"])
 		if err != nil {
 			return "", err
 		}

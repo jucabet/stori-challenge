@@ -8,7 +8,6 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue"
-	"github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
 )
@@ -16,9 +15,12 @@ import (
 func (adapter *DynamoDBAdapter) GetContacts() ([]*entities.Contact, error) {
 	output, err := adapter.client.Query(context.Background(), &dynamodb.QueryInput{
 		TableName:              aws.String(adapter.tableName),
-		KeyConditionExpression: aws.String("type = :type"),
+		KeyConditionExpression: aws.String("#type = :type"),
 		ExpressionAttributeValues: map[string]types.AttributeValue{
 			":type": &types.AttributeValueMemberS{Value: string(domainEnums.Contact)},
+		},
+		ExpressionAttributeNames: map[string]string{
+			"#type": "type",
 		},
 	})
 	if err != nil {
@@ -35,18 +37,13 @@ func (adapter *DynamoDBAdapter) GetContacts() ([]*entities.Contact, error) {
 }
 
 func (adapter *DynamoDBAdapter) GetTransactionsByFileChargeID(fileChargeID string) ([]*entities.Transaction, error) {
-	filter := expression.Name(string(enums.GSIFileChargeID)).Equal(expression.Value(fileChargeID))
-	expr, err := expression.NewBuilder().WithFilter(filter).Build()
-	if err != nil {
-		return nil, err
-	}
-
 	output, err := adapter.client.Query(context.TODO(), &dynamodb.QueryInput{
-		TableName:                 aws.String(adapter.tableName),
-		IndexName:                 aws.String(string(enums.GSIFileChargeID)),
-		ExpressionAttributeNames:  expr.Names(),
-		ExpressionAttributeValues: expr.Values(),
-		KeyConditionExpression:    expr.Filter(),
+		TableName:              aws.String(adapter.tableName),
+		IndexName:              aws.String(string(enums.GSIFileChargeID)),
+		KeyConditionExpression: aws.String("fileChargeId = :fileChargeId"),
+		ExpressionAttributeValues: map[string]types.AttributeValue{
+			":fileChargeId": &types.AttributeValueMemberS{Value: fileChargeID},
+		},
 	})
 	if err != nil {
 		return nil, err
@@ -58,5 +55,5 @@ func (adapter *DynamoDBAdapter) GetTransactionsByFileChargeID(fileChargeID strin
 		return nil, err
 	}
 
-	return nil, nil
+	return transactions, nil
 }

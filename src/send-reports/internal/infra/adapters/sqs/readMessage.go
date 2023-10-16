@@ -2,6 +2,7 @@ package sqs
 
 import (
 	"context"
+	"encoding/json"
 	"jucabet/stori-challenge/send-reports/internal/domain/utils"
 
 	"github.com/aws/aws-sdk-go-v2/service/sqs"
@@ -32,8 +33,9 @@ func (adapter *SQSAdapter) ReadMessage() (map[string]string, error) {
 		return map[string]string{}, nil
 	}
 
-	data := msgResult.Messages[0].Attributes
-	data["messageId"] = *msgResult.Messages[0].MessageId
+	data := map[string]string{}
+	json.Unmarshal([]byte(*msgResult.Messages[0].Body), &data)
+	data["messageId"] = *msgResult.Messages[0].ReceiptHandle
 
 	return data, nil
 }

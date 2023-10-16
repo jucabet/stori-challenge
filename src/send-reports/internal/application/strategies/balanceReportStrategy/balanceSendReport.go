@@ -23,15 +23,19 @@ func (br *BalanceReportStrategy) SendReport(reportData map[string]interface{}) e
 
 		go func(dest *entities.Contact) {
 			defer wg.Done()
-			br.mailerService.SendEmail(&dtos.SendEmailDto{
+			err := br.mailerService.SendEmail(&dtos.SendEmailDto{
 				Email:   dest.Email,
 				Name:    dest.ContactName,
 				Subject: consts.BalanceReportSubjet,
 				Content: replaceTemplateValues(dest.ContactName, reportData),
 			})
+			if err != nil {
+				utils.ErrorLog("SendReport", err)
+			}
 		}(contact)
 	}
 
+	wg.Wait()
 	return nil
 }
 

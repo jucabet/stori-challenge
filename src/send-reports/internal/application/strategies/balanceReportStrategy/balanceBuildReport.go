@@ -1,6 +1,7 @@
 package balancereportstrategy
 
 import (
+	"fmt"
 	"jucabet/stori-challenge/send-reports/internal/domain/dtos"
 	"jucabet/stori-challenge/send-reports/internal/domain/entities"
 	"jucabet/stori-challenge/send-reports/internal/domain/utils"
@@ -40,9 +41,9 @@ var getTransactionsData = func(transactions []*entities.Transaction) map[string]
 	return map[string]interface{}{
 		"totalTXJuly":         totalTXJuly,
 		"totalTXAugust":       totalTXAugust,
-		"totalBalance":        totalBalance,
-		"averageDebitAmount":  (DebitAmount / float64(countDebitAmunt)),
-		"averageCreditAmount": (CreditAmount / float64(countCreditAmount)),
+		"totalBalance":        fmt.Sprintf("%.2f", totalBalance),
+		"averageDebitAmount":  fmt.Sprintf("%.2f", (DebitAmount / float64(countDebitAmunt))),
+		"averageCreditAmount": fmt.Sprintf("%.2f", (CreditAmount / float64(countCreditAmount))),
 	}
 }
 
