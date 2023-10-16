@@ -1,25 +1,21 @@
 package mailer
 
+import "github.com/mailjet/mailjet-apiv3-go/v3"
+
 type Mailer struct {
-	smtpHost  string
-	smtpPort  int
+	client    *mailjet.Client
 	fromEmail string
 	user      string
-	password  string
 }
 
 func NewMailer(
-	smtpHost string,
-	smtpPort int,
+	client *mailjet.Client,
 	fromEmail string,
 	user string,
-	password string,
 ) *Mailer {
 	return &Mailer{
-		smtpHost:  smtpHost,
-		smtpPort:  smtpPort,
+		client:    client,
 		fromEmail: fromEmail,
 		user:      user,
-		password:  password,
 	}
 }

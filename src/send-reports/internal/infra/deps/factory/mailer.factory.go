@@ -3,16 +3,15 @@ package factory
 import (
 	"jucabet/stori-challenge/send-reports/internal/infra/adapters/mailer"
 	"os"
-	"strconv"
+
+	"github.com/mailjet/mailjet-apiv3-go/v3"
 )
 
 func NewMailerAdapter() (*mailer.Mailer, error) {
-	smtpPort, _ := strconv.Atoi(os.Getenv("MAILER_FROM_PORT"))
+	client := mailjet.NewMailjetClient(os.Getenv("MAILER_SERVICE_PUBLIC_KEY"), os.Getenv("MAILER_SERVICE_SECRET_KEY"))
 	return mailer.NewMailer(
-		os.Getenv("MAILER_FROM_HOST"),
-		smtpPort,
+		client,
 		os.Getenv("MAILER_FROM_EMAIL"),
 		os.Getenv("MAILER_FROM_USER"),
-		os.Getenv("MAILER_FROM_PASSWORD"),
 	), nil
 }
