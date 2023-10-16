@@ -23,5 +23,6 @@ func MapTransationEntityToDynamoDto(transaction *entities.Transaction) map[strin
 		"id":               &types.AttributeValueMemberS{Value: transaction.ID},
 		"date":             &types.AttributeValueMemberS{Value: transaction.Date.Format(consts.DatabaseDateFormat)},
 		"transactionValue": &types.AttributeValueMemberN{Value: fmt.Sprintf("%f", transaction.TransactionValue)},
+		"fileChargeId":     &types.AttributeValueMemberS{Value: transaction.FileChargeID},
 	}
 }
