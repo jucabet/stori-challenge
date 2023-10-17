@@ -6,6 +6,7 @@ import (
 	balancereportstrategy "jucabet/stori-challenge/send-reports/internal/application/strategies/balanceReportStrategy"
 	"jucabet/stori-challenge/send-reports/internal/domain/dtos"
 	"jucabet/stori-challenge/send-reports/internal/domain/enums"
+	"jucabet/stori-challenge/send-reports/internal/domain/utils"
 )
 
 func (sr *SendReport) SendReportHandler(data *dtos.SendReportDto) error {
@@ -28,6 +29,7 @@ func (sr *SendReport) SendReportHandler(data *dtos.SendReportDto) error {
 }
 
 var getReportStrategy = func(sr *SendReport, reportType enums.ReportType) interfaces.IStategiesInterface {
+	utils.Info("getReportStrategy", reportType)
 	switch reportType {
 	case enums.BalanceReport:
 		return balancereportstrategy.NewBalanceReportStrategy(sr.databaseService, sr.mailerService)

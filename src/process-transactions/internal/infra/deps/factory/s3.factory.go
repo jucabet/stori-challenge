@@ -9,7 +9,7 @@ import (
 )
 
 func NewS3Adapter() (*s3Adapter.S3Adapter, error) {
-	cfg, err := utils.NewAWSConfig(os.Getenv("AWS_REGION"))
+	cfg, err := utils.NewAWSConfig(os.Getenv("AWS_REGION_PROJECT"))
 	if err != nil {
 		return nil, err
 	}

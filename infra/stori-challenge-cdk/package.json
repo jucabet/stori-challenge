@@ -10,7 +10,7 @@
     "test": "jest",
     "cdk": "cdk",
     "deploy-local": "ENV=local cdklocal bootstrap && ENV=local cdklocal deploy",
-    "deploy-prod": "ENV=prod cdk bootstrap && ENV=local cdk deploy"
+    "deploy-prod": "ENV=prod cdk bootstrap && ENV=prod cdk deploy"
   },
   "devDependencies": {
     "@types/jest": "^29.2.5",

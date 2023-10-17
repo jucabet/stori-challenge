@@ -6,6 +6,7 @@ import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as sqs from 'aws-cdk-lib/aws-sqs';
 import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
 import * as s3Notifications from 'aws-cdk-lib/aws-s3-notifications';
+import * as iam from 'aws-cdk-lib/aws-iam';
 import path = require('path');
 
 export class StoriChallengeCdkStack extends cdk.Stack {
@@ -40,8 +41,8 @@ export class StoriChallengeCdkStack extends cdk.Stack {
     //==================================================
     //==================== S3 Config ===================
     //==================================================
-    const TransactionsBucket = new s3.Bucket(this, 'transactions-bucket', {
-      bucketName: 'transactions-bucket',
+    const TransactionsBucket = new s3.Bucket(this, 'transactions-bucket-stori', {
+      bucketName: 'transactions-bucket-stori',
     });
 
     // Only for prod environment
@@ -50,16 +51,65 @@ export class StoriChallengeCdkStack extends cdk.Stack {
       //================ Lambda Functions ================
       //==================================================
       const processTransactionLambda = new lambda.Function(this, 'processTransaction', {
-        code: lambda.Code.fromAsset(path.join(__dirname, 'process-transaction-handler')),
-        handler: 'processTransaction',
+        functionName: 'process-transaction-lambda',
+        code: lambda.Code.fromAsset(path.join(__dirname, '../../../src/process-transactions')),
+        handler: 'main',
         runtime: lambda.Runtime.GO_1_X,
+        environment: {
+          ENV: 'prod',
+          AWS_REGION_PROJECT: 'us-east-1',
+          AWS_DYNAMO_TABLE_NAME: 'stori-transactions-db',
+          AWS_BUCKET_NAME: 'transactions-bucket-stori',
+          AWS_SQS_NAME: 'reports-queue',
+        }
       })
       
       const sendReportsLambda = new lambda.Function(this, 'sendReports', {
-        code: lambda.Code.fromAsset(path.join(__dirname, 'send-reports-handler')),
-        handler: 'processTransaction',
+        functionName: 'send-reports-lambda',
+        code: lambda.Code.fromAsset(path.join(__dirname, '../../../src/send-reports')),
+        handler: 'main',
         runtime: lambda.Runtime.GO_1_X,
+        environment: {
+          ENV: 'prod',
+          MAILER_FROM_EMAIL: 'testnotifications.martini7a7@gmail.com',
+          MAILER_FROM_USER: 'jucabet',
+          AWS_REGION_PROJECT: 'us-east-1',
+          AWS_DYNAMO_TABLE_NAME: 'stori-transactions-db',
+          AWS_SQS_NAME: 'reports-queue',
+          MAILER_SERVICE_PUBLIC_KEY: 'c8911d759e1b8c73d3cfd2fc90c27968',
+          MAILER_SERVICE_SECRET_KEY: '51d50228733ad4ef3dd9a208092b5c49',
+        }
       })
+
+      const allPolicy = new iam.PolicyStatement({
+        effect: iam.Effect.ALLOW,
+        actions: [
+          's3:*',
+          'sqs:GetQueueUrl',
+          'sqs:ReceiveMessage',
+          'sqs:DeleteMessage',
+          'sqs:SendMessage',
+          'dynamodb:PutItem',
+          'dynamodb:Query',
+        ],
+        resources: [
+          'arn:aws:s3:::*',
+          'arn:aws:sqs:us-east-1:361303870170:reports-queue',
+          'arn:aws:dynamodb:us-east-1:361303870170:table/stori-transactions-db',
+        ],
+      });
+
+      processTransactionLambda.role?.attachInlinePolicy(
+        new iam.Policy(this, 'all-policy-process-tx', {
+          statements: [allPolicy],
+        }),
+      );
+
+      sendReportsLambda.role?.attachInlinePolicy(
+        new iam.Policy(this, 'all-policy-send-reports', {
+          statements: [allPolicy],
+        }),
+      );
 
       sendReportsLambda.addEventSource(
         new SqsEventSource(queue, {

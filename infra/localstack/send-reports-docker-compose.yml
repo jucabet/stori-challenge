@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  send-reports:
+    build: ../../src/send-reports
+    container_name: send-reports
+    network_mode: "host"
+    environment:
+      ENV: docker
+      MAILER_FROM_EMAIL: 'testnotifications.martini7a7@gmail.com'
+      MAILER_FROM_USER: 'jucabet'
+      AWS_REGION_PROJECT: 'us-east-1'
+      AWS_DYNAMO_TABLE_NAME: 'stori-transactions-db'
+      URL_ENDPOINT_LOCALSTACK: 'http://localhost:4566'
+      AWS_SQS_NAME: 'reports-queue'
+      AWS_ACCESS_KEY_ID: "xyz123"
+      AWS_SECRET_ACCESS_KEY: "qL4lyH"
+      MAILER_SERVICE_PUBLIC_KEY: 'c8911d759e1b8c73d3cfd2fc90c27968'
+      MAILER_SERVICE_SECRET_KEY: '51d50228733ad4ef3dd9a208092b5c49'

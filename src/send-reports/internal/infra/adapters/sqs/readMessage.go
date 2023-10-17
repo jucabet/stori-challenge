@@ -33,9 +33,13 @@ func (adapter *SQSAdapter) ReadMessage() (map[string]string, error) {
 		return map[string]string{}, nil
 	}
 
+	utils.Info("ReadMessage", *msgResult.Messages[0].Body)
+
 	data := map[string]string{}
 	json.Unmarshal([]byte(*msgResult.Messages[0].Body), &data)
 	data["messageId"] = *msgResult.Messages[0].ReceiptHandle
+
+	utils.Info("ReadMessage", data)
 
 	return data, nil
 }
