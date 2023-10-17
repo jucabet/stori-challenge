@@ -34,3 +34,9 @@ up-infra-prod:
     --return-consumed-capacity TOTAL && \
 	cd ../.. && \
 	aws s3 cp transactions.csv s3://transactions-bucket/incoming_files/
+
+load-file-local:
+	awslocal s3 cp transactions.csv s3://transactions-bucket/incoming_files/
+
+load-file-prod:
+	aws s3 cp transactions.csv s3://transactions-bucket/incoming_files/

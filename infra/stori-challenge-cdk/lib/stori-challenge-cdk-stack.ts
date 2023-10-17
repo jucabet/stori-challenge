@@ -84,18 +84,14 @@ export class StoriChallengeCdkStack extends cdk.Stack {
       const allPolicy = new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
         actions: [
-          's3:*',
-          'sqs:GetQueueUrl',
-          'sqs:ReceiveMessage',
-          'sqs:DeleteMessage',
-          'sqs:SendMessage',
-          'dynamodb:PutItem',
-          'dynamodb:Query',
+          "s3:*",
+          'sqs:*',
+          'dynamodb:*',
         ],
         resources: [
-          'arn:aws:s3:::*',
-          'arn:aws:sqs:us-east-1:361303870170:reports-queue',
-          'arn:aws:dynamodb:us-east-1:361303870170:table/stori-transactions-db',
+          'arn:aws:s3:::transactions-bucket-stori',
+          'arn:aws:sqs:us-east-1:608335271036:reports-queue',
+          'arn:aws:dynamodb:us-east-1:608335271036:table/stori-transactions-db',
         ],
       });
 
