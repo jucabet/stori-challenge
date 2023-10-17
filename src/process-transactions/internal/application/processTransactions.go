@@ -8,7 +8,6 @@ import (
 	"jucabet/stori-challenge/process-transactions/internal/domain/utils"
 	"strconv"
 	"sync"
-	"time"
 )
 
 func (pt *ProcessTransaction) ProcessTransactions() error {
@@ -50,6 +49,7 @@ var processFiles = func(pt *ProcessTransaction, files []string) error {
 			err := processFileTransactions(pt, filename, txFileInfo)
 			if err != nil {
 				utils.ErrorLog("processFiles", err)
+				return
 			}
 
 			err = moveFile(pt, filename)
@@ -107,7 +107,7 @@ var registerFileChargeInfo = func(
 	chargeInfor := &entities.FileCharge{
 		Type:     enums.FileCharge,
 		ID:       fileChargeID,
-		Date:     time.Now(),
+		Date:     utils.GetCurrentTime(),
 		FileName: filename,
 	}
 
