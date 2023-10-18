@@ -10,7 +10,7 @@ type BalanceReportStrategy struct {
 	mailerService   ports.IMailerService
 }
 
-func NewBalanceReportStrategy(
+var NewBalanceReportStrategy = func(
 	databaseService ports.IDatabaseService,
 	mailerService ports.IMailerService,
 ) interfaces.IStategiesInterface {
