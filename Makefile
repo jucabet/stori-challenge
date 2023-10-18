@@ -13,7 +13,7 @@ up-infra-local:
     --item '{"type":{"S":"CONTACT"},"id":{"S":"1"},"contactName":{"S":"Juan Camilo"},"email":{"S":"camilobg1546@gmail.com"}}' \
     --return-consumed-capacity TOTAL && \
 	cd ../.. && \
-	awslocal s3 cp transactions.csv s3://transactions-bucket/incoming_files/
+	awslocal s3 cp transactions.csv s3://transactions-bucket-stori/incoming_files/
 
 run-docker-process-tx:
 	docker-compose -f ./infra/localstack/process-tx-docker-compose.yml up -d
@@ -33,10 +33,10 @@ up-infra-prod:
     --item '{"type":{"S":"CONTACT"},"id":{"S":"1"},"contactName":{"S":"Juan Camilo"},"email":{"S":"camilobg1546@gmail.com"}}' \
     --return-consumed-capacity TOTAL && \
 	cd ../.. && \
-	aws s3 cp transactions.csv s3://transactions-bucket/incoming_files/
+	aws s3 cp transactions.csv s3://transactions-bucket-stori/incoming_files/
 
 load-file-local:
-	awslocal s3 cp transactions.csv s3://transactions-bucket/incoming_files/
+	awslocal s3 cp transactions.csv s3://transactions-bucket-stori/incoming_files/
 
 load-file-prod:
-	aws s3 cp transactions.csv s3://transactions-bucket/incoming_files/
+	aws s3 cp transactions.csv s3://transactions-bucket-stori/incoming_files/

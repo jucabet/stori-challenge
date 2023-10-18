@@ -7,6 +7,8 @@ import (
 	"os"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
+	"github.com/aws/aws-sdk-go-v2/aws/ratelimit"
+	"github.com/aws/aws-sdk-go-v2/aws/retry"
 	"github.com/aws/aws-sdk-go-v2/config"
 )
 
@@ -27,6 +29,11 @@ func NewAWSConfig(region string) (aws.Config, error) {
 			context.TODO(),
 			config.WithRegion(region),
 			config.WithEndpointResolverWithOptions(customResolver),
+			config.WithRetryer(func() aws.Retryer {
+				return retry.NewStandard(func(so *retry.StandardOptions) {
+					so.RateLimiter = ratelimit.NewTokenRateLimit(1000000)
+				})
+			}),
 		)
 		if err != nil {
 			utils.ErrorLog("NewAWSConfig", err)
