@@ -71,8 +71,8 @@ export class StoriChallengeCdkStack extends cdk.Stack {
         runtime: lambda.Runtime.GO_1_X,
         environment: {
           ENV: 'prod',
-          MAILER_FROM_EMAIL: 'testnotifications.martini7a7@gmail.com',
-          MAILER_FROM_USER: 'jucabet',
+          MAILER_FROM_EMAIL: 'test.jucabet@gmail.com',
+          MAILER_FROM_USER: 'Stori Report',
           AWS_REGION_PROJECT: 'us-east-1',
           AWS_DYNAMO_TABLE_NAME: 'stori-transactions-db',
           AWS_SQS_NAME: 'reports-queue',
